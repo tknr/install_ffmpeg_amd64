@@ -1,6 +1,6 @@
 #!/bin/bash -x
 echo "this command must be executed in root user."
-wget https://johnvansickle.com/ffmpeg/builds/ffmpeg-git-amd64-static.tar.xz || exit 1
+curl https://johnvansickle.com/ffmpeg/builds/ffmpeg-git-amd64-static.tar.xz -O || exit 1
 tar xvf ffmpeg-git-amd64-static.tar.xz || exit 1
 rm ffmpeg-git-amd64-static.tar.xz
 mv ffmpeg-* ffmpeg-git || exit 1
