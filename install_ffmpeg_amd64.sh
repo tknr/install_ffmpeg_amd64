@@ -4,6 +4,8 @@ if [ $(whoami) != "root" ]; then
         exit 1
 fi
 
+cd `dirname $0`
+
 curl https://johnvansickle.com/ffmpeg/builds/ffmpeg-git-amd64-static.tar.xz -O || exit 1
 tar xvf ffmpeg-git-amd64-static.tar.xz || exit 1
 rm ffmpeg-git-amd64-static.tar.xz
